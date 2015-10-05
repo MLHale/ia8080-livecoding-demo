@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('home');
   this.route('forum', function(){
-    this.route('forumpost', {path: 'post/:forumpost_id'});
+    this.route('forumpost', {path: 'post/:forumpost_id'}, function() {});
   });
 });
 

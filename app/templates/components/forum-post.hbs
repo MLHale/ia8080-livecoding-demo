@@ -1,9 +1,11 @@
+{{#with post}}
 <div class="panel panel-default">
 	<div class="panel-heading">
-	[<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> {{post.upvotes}}]
-	{{#link-to 'forum.forumpost' post.id}}{{post.title}}{{/link-to}} (@{{post.author}})</div>
+	<button type="button" class="btn btn-primary" {{action 'upvote'}}><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> {{upvotes}}</button>
+	{{#link-to 'forum.forumpost' post.id}}{{title}}{{/link-to}} (@{{author}})</div>
 	<div class="panel-body">
-		{{post.content}}<br>
+		{{content}}<br>
 	</div>
+
 </div>
-{{outlet}}
+{{/with}}
