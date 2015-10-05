@@ -5,10 +5,11 @@ export default Ember.Controller.extend({
 	loggedIn: false,
 	errorMsg: '',
 	remember: false,
-	action: {
+	actions: {
 		login: function(){
 			//do stuff to authenticate here
 			this.set('loggedIn', true);
+			this.transitionTo('home');
 		}
 	}
 });
