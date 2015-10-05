@@ -1,2 +1,9 @@
 This is the forum
-{{outlet}}
+<div class="container-fluid">
+	{{#each post in content}}
+		Title: {{post.title}}<br>
+		Author: {{post.author}}<br>
+		Content: {{post.content}}<br>
+		Upvotes: {{post.upvotes}}
+	{{/each}}
+</div>
