@@ -8,19 +8,22 @@ module.exports = function(app) {
           id: 1,
           title:'title1',
           content: 'somestuff1',
-          author: 'author1'
+          author: 'author1',
+          upvotes: 1,
         },
         { 
           id: 2,
           title:'title2',
           content: 'somestuff2',
-          author: 'author2'
+          author: 'author2',
+          upvotes: 2,
         },
         { 
           id: 3,
           title:'title3',
           content: 'somestuff3',
-          author: 'author3'
+          author: 'author3',
+          upvotes: 3,
         }
       ]
     });

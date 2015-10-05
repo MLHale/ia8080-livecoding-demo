@@ -1,9 +1,14 @@
 This is the forum
 <div class="container-fluid">
+	
 	{{#each post in content}}
-		Title: {{post.title}}<br>
-		Author: {{post.author}}<br>
-		Content: {{post.content}}<br>
-		Upvotes: {{post.upvotes}}
+		<div class="panel panel-default">
+		<div class="panel-heading">
+		[<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> {{post.upvotes}}]
+		{{post.title}} (@{{post.author}})</div>
+		<div class="panel-body">
+			{{post.content}}<br>
+		</div>
+	</div>
 	{{/each}}
 </div>
