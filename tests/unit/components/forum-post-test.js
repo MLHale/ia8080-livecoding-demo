@@ -17,3 +17,13 @@ test('it renders', function(assert) {
   this.render();
   assert.equal(component._state, 'inDOM');
 });
+
+test('upvote works', function(assert){
+  assert.expect(1);
+  var component = this.subject({
+    post: {id: 1, title: 'testtitle', upvotes: 0, author: 'testauthor', content: 'testcontent'}
+  });
+  this.render();
+  this.$().find('button').click();
+  assert.equal(post.upvotes, 1);
+});

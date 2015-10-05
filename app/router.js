@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('forum', function(){
     this.route('forumpost', {path: 'post/:forumpost_id'}, function() {});
   });
+  this.route('auth');
 });
 
 export default Router;
