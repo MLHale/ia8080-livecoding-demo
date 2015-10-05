@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+	[<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> {{post.upvotes}}]
+	{{#link-to 'forum.forumpost' post.id}}{{post.title}}{{/link-to}} (@{{post.author}})</div>
+	<div class="panel-body">
+		{{post.content}}<br>
+	</div>
+</div>
+{{outlet}}

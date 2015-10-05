@@ -2,13 +2,7 @@ This is the forum
 <div class="container-fluid">
 	
 	{{#each post in content}}
-		<div class="panel panel-default">
-		<div class="panel-heading">
-		[<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> {{post.upvotes}}]
-		{{post.title}} (@{{post.author}})</div>
-		<div class="panel-body">
-			{{post.content}}<br>
-		</div>
-	</div>
+		{{forum-post post=post}}
 	{{/each}}
 </div>
+{{outlet}}
