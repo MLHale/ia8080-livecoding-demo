@@ -12,7 +12,7 @@ export default Ember.Route.extend({
 		var t = this;
 		var auth = t.controllerFor('auth');
 		var previoustrans = t.get('currentTransition');
-		console.log('User attempting to access: /'+transition.targetName)
+		console.log('User attempting to access: /'+transition.targetName);
 		if(!auth.loggedIn){
 			if(transition.targetName !== 'auth'){
 				t.set('currentTransition', transition);
@@ -23,6 +23,7 @@ export default Ember.Route.extend({
 		}
 		else if(previoustrans){
 			console.log('Redirecting back to original request: /'+previoustrans.targetName);
+			t.set('currentTransition', null);
 			previoustrans.retry();
 		}
 	},
