@@ -8,8 +8,19 @@ export default Ember.Controller.extend({
 	actions: {
 		login: function(){
 			//do stuff to authenticate here
-			this.set('loggedIn', true);
-			this.transitionTo('home');
+			console.log('login')
+			var user = this.get('username');
+			if(user!="matt"){
+				this.set('errorMsg', 'youre not awesome');
+			}
+			else{
+				this.set('loggedIn', true);
+				this.transitionTo('home');
+			}
+
+		},
+		test: function(){
+			console.log('test')
 		}
 	}
 });

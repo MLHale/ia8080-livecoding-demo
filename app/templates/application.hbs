@@ -1,5 +1,7 @@
-{{nav-bar}}
+{{nav-bar authControllerChild=authController}}
 <div class="container-fluid">
 	<h2 id="title">Welcome to Ember.js</h2>
 	{{outlet}}
 </div>
+
+{{authController.username}}

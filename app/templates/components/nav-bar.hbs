@@ -14,7 +14,12 @@
 				<a href="/forum">Forum</a>
 			{{/link-to}}
 		</ul>
-		<p class="navbar-text navbar-right">Signed in as: </p>
+		{{#if authControllerChild.loggedIn}}
+			<p class="navbar-text navbar-right">Signed in as:		{{authControllerChild.username}}
+			</p>
+			<button {{action 'foo'}}>alert foo</button>
+		{{/if}}
+
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>

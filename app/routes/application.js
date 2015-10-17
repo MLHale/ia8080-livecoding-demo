@@ -11,6 +11,7 @@ export default Ember.Route.extend({
 		console.log('Checking authentication');
 		var t = this;
 		var auth = t.controllerFor('auth');
+		console.log("are you logged in "+ auth.get('loggedIn'))
 		var previoustrans = t.get('currentTransition');
 		console.log('User attempting to access: /'+transition.targetName);
 		if(!auth.loggedIn){
@@ -26,6 +27,9 @@ export default Ember.Route.extend({
 			t.set('currentTransition', null);
 			previoustrans.retry();
 		}
+	},
+	setupController: function(controller, model){
+		controller.set('authController', this.controllerFor('auth'));
 	},
 	actions: {
 		willTransition: function(transition){
