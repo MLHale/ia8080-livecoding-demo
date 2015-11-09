@@ -6,6 +6,11 @@
 	<div class="panel-body">
 		{{content}}<br>
 	</div>
+	<div class="panel-footer">
+		{{#each tag in tags}}
+			<button class="btn btn-info btn-xs">{{tag}}</button>
+		{{/each}}
+	</div>
 
 </div>
 {{/with}}
