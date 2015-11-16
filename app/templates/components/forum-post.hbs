@@ -4,7 +4,7 @@
 	<button type="button" class="btn btn-primary" {{action 'upvote'}}><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> {{upvotes}}</button>
 	{{#link-to 'forum.forumpost' post.id}}{{title}}{{/link-to}} (@{{author}})</div>
 	<div class="panel-body">
-		{{content}}<br>
+		{{{content}}}<br>
 	</div>
 	<div class="panel-footer">
 		{{#each tag in tags}}
